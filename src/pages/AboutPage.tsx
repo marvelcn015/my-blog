@@ -71,9 +71,8 @@ function AboutPage() {
                                     <strong>Frontend Framework (學習中...)</strong>
                                     <ul>
                                         <li>Figma to Code</li>
-                                        <li>React Native</li>
+                                        <li>React</li>
                                         <li>Bootstrap 5</li>
-                                        <li>JQuery</li>
                                         <li>AJAX, Axios</li>
                                     </ul>
                                 </li>
