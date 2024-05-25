@@ -26,6 +26,8 @@ function BlogPage() {
     return (
         <>
             <h1>Blog</h1>
+            <h3>_</h3>
+            <p className = "fw-bold">The page is aimed at fetching the issue list from my repo "my_blog", using GitHub API + Axios.</p>
             <div className="row row-cols-1 row-cols-md-2 g-4">
                 {issues.map((issue) => (
                     <div className="col" key={issue.number}>
@@ -37,6 +39,9 @@ function BlogPage() {
                         </div>
                     </div>
                 ))}
+
+            <p className='text-break'></p>
+            <p className='fw-bold'>Please feel free to visit <a href="https://github.com/marvelcn015/my-blog" target="_blank">my repo</a> and leave any comments!</p>
             </div>
         </>
     );
