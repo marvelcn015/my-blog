@@ -9,7 +9,7 @@ function AboutPage() {
             <main>
                 <div className="row">
                     <div className="col-md-4 mb-4">
-                        <img src="%PUBLIC_URL%/my.jpg" alt="照片" />
+                        <img src={require('../assets/S__87580677.jpg')} width={'300px'} alt="照片"/>
                     </div>
                     <div className="col-md-8">
                         <section className="mb-5">
