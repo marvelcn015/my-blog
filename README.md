@@ -1,46 +1,99 @@
-# Getting Started with Create React App
+# my_blog 請假系統面試小作業
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React application written in TypeScript, utilizing Bootstrap 5 for styling via CDN. It consists of two main pages: `AboutPage` and `Blog`. The `Blog` page integrates with the GitHub API to fetch and display a list of issues from my own repository using Axios for network requests. The application is deployed online using Vercel.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Pages](#pages)
+  - [AboutPage](#aboutpage)
+  - [Blog](#blog)
+- [Setup and Installation](#setup-and-installation)
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React**: A JavaScript library for building user interfaces.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Bootstrap 5**: A CSS framework for responsive and modern web design, included via CDN.
+- **Axios**: A promise-based HTTP client for making network requests.
+- **Vercel**: A cloud platform for static sites and Serverless Functions.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+my-react-project/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── pages/
+│   │   ├── AboutPage.tsx
+│   │   └── Blog.tsx
+│   ├── utils/
+│   │   └── axios.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── ...
+├── package.json
+├── tsconfig.json
+├── README.md
+└── ...
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Pages
 
-### `npm run build`
+### AboutPage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The `AboutPage` component provides a detailed personal resume, including work experience and skills. It is styled using Bootstrap 5 classes to ensure a responsive and visually appealing layout.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Blog
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The `Blog` component connects to the GitHub API to fetch and display a list of issues from "/marvelcn015/my_blog" repository. Axios is used to make the API requests, and the data is displayed in a nice format. This page allows users to stay updated with the latest discussions and issues from the selected repository.
 
-### `npm run eject`
+#### Fetching Data from GitHub API
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The `githubApi.ts` file in the `services` directory handles the API requests:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```typescript
+import axios from 'axios';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+const GITHUB_API_URL = 'https://api.github.com/repos/{owner}/{repo}/issues';
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+export const fetchIssues = async () => {
+  try {
+    const response = await axios.get(GITHUB_API_URL);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching issues from GitHub:', error);
+    throw error;
+  }
+};
+```
 
-## Learn More
+## Setup and Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Clone the repository**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/yourusername/my-react-project.git
+cd my-react-project
+```
+
+2. **Install dependencies**:
+
+```bash
+npm install
+```
+
+3. **Run the development server**:
+
+```bash
+npm start
+```
+
+This will start the development server at `http://localhost:3000`.
+
+---
+
+鵝鵝鵝終於做完了，腦細胞全部死光光><
