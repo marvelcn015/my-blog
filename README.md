@@ -22,7 +22,7 @@ This project is a React application written in TypeScript, utilizing Bootstrap 5
 ## Project Structure
 
 ```
-my-react-project/
+my-blog/
 ├── public/
 │   ├── index.html
 │   └── ...
