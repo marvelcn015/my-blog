@@ -16,16 +16,16 @@ function AboutPage() {
                         <Section title="企劃、策展與演講經歷">
                             <UnorderedList
                                 items={[
-                                    '2019 未來領袖，魔術口才訓練營 / 總召&講師',
-                                    '2019 辦一場，能改變思維的分享講座 / 特邀講師',
-                                    '2020 未來領袖，魔術口才訓練營 / 總召&講師',
-                                    '2023 台積電青年築夢計畫_語您童行 / 複審入圍 (全國前16強)',
-                                    '2023 台積電青年築夢計畫_翻閱思考 / ',
                                     '語您童行 / 企劃監製&網管',
                                     '翻閱思考 / 組織營運部PM&網管',
+                                    '2023 台積電青年築夢計畫_翻閱思考 / ',
+                                    '2023 台積電青年築夢計畫_語您童行 / 複審入圍 (全國前16強)',
+                                    '2020 未來領袖，魔術口才訓練營 / 總召&講師',
+                                    '2019 未來領袖，魔術口才訓練營 / 總召&講師',
+                                    '2019 辦一場，能改變思維的分享講座 / 特邀講師'
                                 ]}
                                 hasBadge
-                                badgeText={['', '', '', '', '年度獲獎', '', '']}
+                                badgeText={['', '', '年度獲獎', '', '', '', '']}
                             />
                         </Section>
 
@@ -54,32 +54,25 @@ function AboutPage() {
                                     'GEPT 中高級初試 ( L: 102, R: 114 )',
                                     '112學測 / 14級分 ',
                                     '高中校內英語演講 第一名',
-                                    '2022臺師大英文辯論公共論壇 ',
+                                    '2022臺師大英文辯論公共論壇 / ',
                                     '多場模擬聯合國經驗',
                                     '市長語文獎',
                                     '具1~2年家教以及升學補習班工作經驗',
                                     'CWT 中檢中高級',
                                 ]}
                                 hasBadge
-                                badgeText={['', 'PR93', '', '南區優勝', '', '', '', '']}
+                                badgeText={['', '全國PR93', '', '南區優勝', '', '', '', '']}
                                 badgeColor="primary"
                             />
                         </Section>
 
                         <Section title="資訊">
                             <h4 className="mb-3">軟體</h4>
-                            <UnorderedList items={['CPE 3/8 (with Java)', 'Figma to Code', 'React', 'Bootstrap 5', 'Axios']} />
+                            <UnorderedList items={['CPE 3/8 (with Java)', '_']} />
+                            <h6 className="mb-3">Frontend Framework (學習中...)</h6>
+                            <UnorderedList items={['Figma to Code', 'React', 'Bootstrap 5', 'Axios', '']} />
                             <h4 className="mb-3">硬體</h4>
                             <UnorderedList items={['熟悉PC規格與組裝']} />
-                        </Section>
-
-                        <Section title="吉他">
-                            <UnorderedList
-                                items={[
-                                    '能自己準備自彈自唱',
-                                    '基礎FingerStyle',
-                                ]}
-                            />
                         </Section>
 
                         <Section title="其他興趣">
@@ -88,6 +81,7 @@ function AboutPage() {
                                     '心理學 / 社會學',
                                     '羽球',
                                     '戴水肺潛水',
+                                    '基礎FingerStyle (吉他)',
                                     '五隻IKEA大鯊魚飼主',
                                 ]}
                             />
